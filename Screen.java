@@ -40,7 +40,7 @@ final class Screen implements Runnable {
         for (int row = 0; row < 12; row++) {
             long bar = total == 0 ? 0 : v[row % 3] * 60 / total;
             for (int col = 0; col < 60; col++)
-                sb.append(String.format("%c", col < bar ? '#' : '.'));
+                sb.append(col < bar ? '#' : '.');
             sb.append('\n');
         }
         return sb.toString();
